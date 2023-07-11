@@ -20,5 +20,27 @@ public class Main {
         RESULTADO = A % B; //RESTO
         System.out.println(RESULTADO);
 
+
+        boolean VERDADEIRO = false;
+
+        VERDADEIRO = A == C;
+        System.out.println(VERDADEIRO);
+
+        VERDADEIRO = A != C;
+        System.out.println(VERDADEIRO);
+
+        VERDADEIRO = A > C;
+        System.out.println(VERDADEIRO);
+
+        VERDADEIRO = A < C;
+        System.out.println(VERDADEIRO);
+
+        VERDADEIRO = A >= C;
+        System.out.println(VERDADEIRO);
+
+        VERDADEIRO = A <= C;
+        System.out.println(VERDADEIRO);
+
+
     }
 }
