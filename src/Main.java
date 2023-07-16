@@ -1,5 +1,42 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hello ADS2!");
+
+        Aluno aluno01 = new Aluno();
+        Map<String, List<Integer>> disciplinas = new HashMap<>();
+        List<Integer> notasMatematica = new ArrayList<>();
+        List<Integer> notasPortugues = new ArrayList<>();
+
+        aluno01.codigo = 123;
+        aluno01.nome = "Bruno Kurzawe";
+        aluno01.dataNascimento = LocalDate.of(2001, 12, 15);
+        aluno01.endereco = "Rua Pedro Benetton, 275";
+        aluno01.telefone = "(48) 9 9908-9410";
+
+        notasMatematica.add(10);
+        notasMatematica.add(9);
+        disciplinas.put("Matematica", notasMatematica);
+
+        notasPortugues.add(7);
+        notasPortugues.add(5);
+        disciplinas.put("Portugues", notasPortugues);
+
+        aluno01.disciplinas = disciplinas;
+
+        aluno01.imprimirDadosAluno();
+
+        aluno01.calcularMediaPorMateria();
+
+        aluno01.calcularMediaGeral();
+
+
+
+//        aluno01.mediaPorMateria();
+//        aluno01.mediaGeral();
     }
 }
