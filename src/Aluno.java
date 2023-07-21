@@ -11,14 +11,9 @@ public class Aluno {
     String endereco;
     Map<String, List<Integer>> disciplinas;
 
-
-
     public void imprimirDadosAluno() {
         System.out.println("Código: " + codigo + " Nome: " + nome + " Data nascimento:" + dataNascimento);
     }
-
-
-
 
     public void calcularMediaPorMateria() {
         for (Map.Entry<String, List<Integer>> entry : disciplinas.entrySet()) {
@@ -34,17 +29,5 @@ public class Aluno {
         }
     }
 
-    public void calcularMediaGeral() {
-        Integer mediaGeral = 0;
-        for (Map.Entry<String, List<Integer>> entry : disciplinas.entrySet()) {
-            List<Integer> notas = entry.getValue();
 
-            Integer somaNotas = 0;
-            for (Integer nota : notas) {
-                somaNotas = somaNotas + nota;
-            }
-            mediaGeral += somaNotas / notas.size();
-        }
-        System.out.println("Média Geral: " + (mediaGeral / disciplinas.size()));
-    }
 }
