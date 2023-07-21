@@ -32,7 +32,7 @@ public class Main {
 
         aluno01.calcularMediaPorMateria();
 
-        //aluno01.calcularMediaGeral();
+        aluno01.calcularMediaGeral();
 
     }
 }

@@ -29,5 +29,18 @@ public class Aluno {
         }
     }
 
+    public void calcularMediaGeral() {
+        Integer mediaGeral = 0;
+        for (Map.Entry<String, List<Integer>> entry : disciplinas.entrySet()) {
+            List<Integer> notas = entry.getValue();
+
+            Integer somaNotas = 0;
+            for (Integer nota : notas) {
+                somaNotas = somaNotas + nota;
+            }
+            mediaGeral += somaNotas / notas.size();
+        }
+        System.out.println("Média Geral: " + (mediaGeral / disciplinas.size()));
+    }
 
 }
