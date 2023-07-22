@@ -18,21 +18,31 @@ public class Main {
         aluno01.endereco = "Rua Pedro Benetton, 275";
         aluno01.telefone = "(48) 9 9908-9410";
 
-        notasMatematica.add(10);
-        notasMatematica.add(9);
+        notasMatematica.add(6);
+        notasMatematica.add(5);
         disciplinas.put("Matematica", notasMatematica);
 
-        notasPortugues.add(7);
-        notasPortugues.add(5);
+        notasPortugues.add(6);
+        notasPortugues.add(3);
         disciplinas.put("Portugues", notasPortugues);
 
         aluno01.disciplinas = disciplinas;
 
-        aluno01.imprimirDadosAluno();
+//        aluno01.imprimirDadosAluno();
+//
+//        aluno01.calcularMediaPorMateria();
+//
+//        aluno01.calcularMediaGeral();
+//
+//        aluno01.calcularIdade();
+//
+//        aluno01.imprimirDisciplinasMatriculadas();
 
-        aluno01.calcularMediaPorMateria();
 
-        aluno01.calcularMediaGeral();
+
+        System.out.println(" Aluno " + aluno01.nome + " possui a média " + aluno01.calcularMediaGeral());
+
+        aluno01.verificaAlunoAprovado();
 
     }
 }
