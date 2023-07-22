@@ -13,15 +13,16 @@ import java.util.List;
             Disciplina matematicaInteligente = new Disciplina("Matematica", List.of(8,9));
             Disciplina matematicaTrapaseiro = new Disciplina("Matematica", List.of(5,4));
 
-            alunoInteligente.disciplinas = List.of(portuguesInteligente, matematicaInteligente);
-            alunoTrapaceiro.disciplinas = List.of(portuguesTrapaseiro, matematicaTrapaseiro);
+            alunoInteligente.addDisciplina(portuguesInteligente);
+            alunoInteligente.addDisciplina(matematicaInteligente);
+            alunoTrapaceiro.addDisciplina(portuguesTrapaseiro);
+            alunoTrapaceiro.addDisciplina(matematicaTrapaseiro);
 
             alunoInteligente.calcularMediaGeral();
-            System.out.println("Nota do aluno: "+alunoInteligente.nome+" é " +alunoInteligente.mediaGeral);
+            System.out.println("Nota do aluno: "+alunoInteligente.buscaNome()+" é " +alunoInteligente.buscaMediaGeral());
 
             alunoTrapaceiro.calcularMediaGeral();
-            alunoTrapaceiro.mediaGeral = 9;
-            System.out.println("Nota do aluno: "+alunoTrapaceiro.nome+" é " +alunoTrapaceiro.mediaGeral);
+            System.out.println("Nota do aluno: "+alunoTrapaceiro.buscaNome()+" é " +alunoTrapaceiro.buscaMediaGeral());
 
         }
     }

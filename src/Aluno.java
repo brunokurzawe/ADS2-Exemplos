@@ -6,15 +6,27 @@ import java.util.Map;
 
 public class Aluno {
 
-    Integer codigo;
-    String nome;
-    LocalDate dataNascimento;
-    List<Disciplina> disciplinas = new ArrayList<>();
-    Integer mediaGeral = 0;
+    private Integer codigo;
+    private String nome;
+    private LocalDate dataNascimento;
+    private List<Disciplina> disciplinas = new ArrayList<>();
+    private Integer mediaGeral = 0;
 
     public Aluno(Integer codigo, String nome) {
         this.codigo = codigo;
         this.nome = nome;
+    }
+
+    public void addDisciplina(Disciplina disciplina) {
+        disciplinas.add(disciplina);
+    }
+
+    public Integer buscaMediaGeral(){
+        return mediaGeral;
+    }
+
+    public String buscaNome(){
+        return nome;
     }
 
     public Integer calcularMediaGeral() {
