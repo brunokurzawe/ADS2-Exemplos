@@ -1,16 +1,14 @@
-
-
 public class Boletim {
 
-    String aluno;
+    Aluno aluno;
 
-    public void verificaAlunoAprovado(String aluno, Integer mediaGeral) {
+    public void verificaAlunoAprovado(Integer mediaGeral) {
         if (mediaGeral >= 7) {
-            System.out.println("O aluno "+aluno+" foi APROVADO");
+            System.out.println("O aluno " + aluno.nome + " foi APROVADO");
         } else if (mediaGeral >= 5) {
-            System.out.println("O aluno "+aluno+" foi para RECUPERACAO");
+            System.out.println("O aluno " + aluno.nome + " foi para RECUPERACAO");
         } else {
-            System.out.println("O aluno "+aluno+" foi REPROVADO");
+            System.out.println("O aluno " + aluno.nome + " foi REPROVADO");
         }
     }
 }

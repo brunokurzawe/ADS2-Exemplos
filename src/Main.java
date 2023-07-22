@@ -18,12 +18,12 @@ public class Main {
         aluno01.endereco = "Rua Pedro Benetton, 275";
         aluno01.telefone = "(48) 9 9908-9410";
 
-        notasMatematica.add(6);
+        notasMatematica.add(8);
         notasMatematica.add(5);
         disciplinas.put("Matematica", notasMatematica);
 
         notasPortugues.add(6);
-        notasPortugues.add(3);
+        notasPortugues.add(9);
         disciplinas.put("Portugues", notasPortugues);
 
         aluno01.disciplinas = disciplinas;
@@ -39,10 +39,12 @@ public class Main {
 //        aluno01.imprimirDisciplinasMatriculadas();
 
 
+        Boletim boletim = new Boletim();
+        boletim.aluno = aluno01;
+        boletim.verificaAlunoAprovado(aluno01.calcularMediaGeral());
 
-        System.out.println(" Aluno " + aluno01.nome + " possui a média " + aluno01.calcularMediaGeral());
 
-        aluno01.verificaAlunoAprovado();
+        //aluno01.verificaAlunoAprovado();
 
     }
 }
