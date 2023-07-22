@@ -21,12 +21,28 @@ public class Aluno {
         disciplinas.add(disciplina);
     }
 
-    public Integer buscaMediaGeral(){
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public Integer getMediaGeral() {
         return mediaGeral;
     }
 
-    public String buscaNome(){
-        return nome;
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public Integer calcularMediaGeral() {

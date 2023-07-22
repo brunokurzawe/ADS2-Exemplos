@@ -19,10 +19,10 @@ import java.util.List;
             alunoTrapaceiro.addDisciplina(matematicaTrapaseiro);
 
             alunoInteligente.calcularMediaGeral();
-            System.out.println("Nota do aluno: "+alunoInteligente.buscaNome()+" é " +alunoInteligente.buscaMediaGeral());
+            System.out.println("Nota do aluno: "+alunoInteligente.getNome()+" é " +alunoInteligente.getMediaGeral());
 
             alunoTrapaceiro.calcularMediaGeral();
-            System.out.println("Nota do aluno: "+alunoTrapaceiro.buscaNome()+" é " +alunoTrapaceiro.buscaMediaGeral());
+            System.out.println("Nota do aluno: "+alunoTrapaceiro.getNome()+" é " +alunoTrapaceiro.getMediaGeral());
 
         }
     }
