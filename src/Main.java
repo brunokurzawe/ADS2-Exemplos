@@ -1,50 +1,28 @@
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class Main {
     public static void main(String[] args) {
 
-        Aluno aluno01 = new Aluno();
-        Map<String, List<Integer>> disciplinas = new HashMap<>();
-        List<Integer> notasMatematica = new ArrayList<>();
-        List<Integer> notasPortugues = new ArrayList<>();
+        Aluno aluno = new Aluno();
+        aluno.nome = "Bruno Kurzawe";
 
-        aluno01.codigo = 123;
-        aluno01.nome = "Bruno Kurzawe";
-        aluno01.dataNascimento = LocalDate.of(2001, 12, 15);
-        aluno01.endereco = "Rua Pedro Benetton, 275";
-        aluno01.telefone = "(48) 9 9908-9410";
+        Disciplina matematica = new Disciplina();
+        matematica.adicionaNota(9);
+        matematica.adicionaNota(7);
 
-        notasMatematica.add(8);
-        notasMatematica.add(5);
-        disciplinas.put("Matematica", notasMatematica);
+        Disciplina portugues = new Disciplina();
+        portugues.adicionaNota(8);
+        portugues.adicionaNota(8);
 
-        notasPortugues.add(6);
-        notasPortugues.add(9);
-        disciplinas.put("Portugues", notasPortugues);
+        aluno.disciplinas.add(matematica);
+        aluno.disciplinas.add(portugues);
 
-        aluno01.disciplinas = disciplinas;
-
-//        aluno01.imprimirDadosAluno();
-//
-//        aluno01.calcularMediaPorMateria();
-//
-//        aluno01.calcularMediaGeral();
-//
-//        aluno01.calcularIdade();
-//
-//        aluno01.imprimirDisciplinasMatriculadas();
-
-
-        Boletim boletim = new Boletim();
-        boletim.aluno = aluno01;
-        boletim.verificaAlunoAprovado(aluno01.calcularMediaGeral());
-
-
-        //aluno01.verificaAlunoAprovado();
+        Integer notaGeral = aluno.calcularMediaGeral();
+        System.out.println("O aluno "+aluno.nome+ " tem média geral "+ notaGeral);
 
     }
 }
+
+
+
+
+
+
