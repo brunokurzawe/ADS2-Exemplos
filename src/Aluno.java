@@ -9,12 +9,12 @@ public class Aluno {
     Integer codigo;
     String nome;
     LocalDate dataNascimento;
-    String telefone;
-    String endereco;
     List<Disciplina> disciplinas = new ArrayList<>();
+    Integer mediaGeral = 0;
 
-    public void imprimirDadosAluno() {
-        System.out.println("Código: " + codigo + " Nome: " + nome + " Data nascimento:" + dataNascimento);
+    public Aluno(Integer codigo, String nome) {
+        this.codigo = codigo;
+        this.nome = nome;
     }
 
     public Integer calcularMediaGeral() {
@@ -22,7 +22,8 @@ public class Aluno {
         for (Disciplina disciplina : disciplinas) {
             somaMedias += disciplina.calcularMediaDisciplina();
         }
-        return somaMedias / disciplinas.size();
+        mediaGeral = somaMedias / disciplinas.size();
+        return mediaGeral;
     }
 
 }

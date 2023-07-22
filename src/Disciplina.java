@@ -7,6 +7,11 @@ public class Disciplina {
     String professor;
     List<Integer> notas = new ArrayList<>();
 
+    public Disciplina(String nome, List<Integer> notas) {
+        this.nome = nome;
+        this.notas = notas;
+    }
+
     public void adicionaNota(Integer nota) {
         notas.add(nota);
     }
