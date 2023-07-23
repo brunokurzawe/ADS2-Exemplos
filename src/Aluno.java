@@ -1,4 +1,4 @@
-public class Aluno extends Pessoa {
+public abstract class Aluno extends Pessoa {
 
     private Double mediaGeral = 0.0;
 
