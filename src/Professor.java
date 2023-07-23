@@ -3,6 +3,11 @@ public class Professor extends Funcionario {
     private Double cargaHoraria;
     private Double valorHora;
 
+    @Override
+    public Double getSalario() {
+        return cargaHoraria * valorHora;
+    }
+
     public Double getCargaHoraria() {
         return cargaHoraria;
     }

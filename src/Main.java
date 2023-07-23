@@ -10,6 +10,12 @@ public class Main {
 
         System.out.println(secretaria.getSalario());
 
+        Professor professor = new Professor();
+        professor.setCargaHoraria(85.50);
+        professor.setValorHora(39.90);
+
+        System.out.println(professor.getSalario());
+
     }
 
 }
