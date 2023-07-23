@@ -2,14 +2,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Aluno aluno = new Aluno();
+        AlunoFaculdade aluno = new AlunoFaculdade(10.0, 8.0, 7.0);
+        aluno.setNome("Bruno");
 
-        aluno.aplicarMediaGeral(7.0);
-
-        aluno.aplicarMediaGeral("7");
-
-        aluno.aplicarMediaGeral(7);
-
+        Boletim boletim = new Boletim(aluno);
+        boletim.imprimir();
     }
 
 }
