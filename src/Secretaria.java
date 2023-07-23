@@ -5,6 +5,11 @@ public class Secretaria extends Funcionario {
     private Double salarioFamilia;
     private Double horasExtras;
 
+    @Override
+    public Double getSalario() {
+        return (salarioContratual + salarioFamilia + bonus + horasExtras);
+    }
+
     public Double getBonus() {
         return bonus;
     }
