@@ -5,10 +5,7 @@ public abstract class Aluno extends Pessoa {
     public Aluno() {
     }
 
-
-    public Double calculaMediaGeral() {
-        return mediaGeral;
-    }
+    abstract Double calculaMediaGeral();
 
 }
 
