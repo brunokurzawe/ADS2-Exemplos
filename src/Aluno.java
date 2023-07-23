@@ -1,11 +1,10 @@
-public abstract class Aluno extends Pessoa {
+public class Aluno implements Autenticavel {
 
-    private Double mediaGeral = 0.0;
-
-    public Aluno() {
+    @Override
+    public boolean autentica() {
+        ///Regras especificas do Aluno
+        return true;
     }
-
-    abstract Double calculaMediaGeral();
 
 }
 
