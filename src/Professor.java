@@ -1,27 +1,22 @@
-import java.time.LocalDate;
+public class Professor extends Funcionario {
 
-public class Professor extends Pessoa{
+    private Double cargaHoraria;
+    private Double valorHora;
 
-    private String matricula;
-    private LocalDate dataContratacao;
-
-    public Professor() {
+    public Double getCargaHoraria() {
+        return cargaHoraria;
     }
 
-    public String getMatricula() {
-        return matricula;
+    public void setCargaHoraria(Double cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
+    public Double getValorHora() {
+        return valorHora;
     }
 
-    public LocalDate getDataContratacao() {
-        return dataContratacao;
-    }
-
-    public void setDataContratacao(LocalDate dataContratacao) {
-        this.dataContratacao = dataContratacao;
+    public void setValorHora(Double valorHora) {
+        this.valorHora = valorHora;
     }
 }
 
